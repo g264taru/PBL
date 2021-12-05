@@ -69,9 +69,9 @@
 {
   function change_button(){
     const menuItems = document.querySelectorAll('.menu li a');
-    // console.log(menuItems);
+    console.log(menuItems);
     if(menuItems[0].className == "active"){
-      create_pass(); 
+      create_pass();
     }else{
       create_name();
     }
@@ -125,7 +125,6 @@
     for(i=0; i<pass_length; i++){
       create += unit[Math.floor(Math.random()*unit_len)];
     }
-    console.log(create);
     if(top != ''){
       create = top + create;
     }
@@ -138,6 +137,27 @@
 
 {
   function create_name(){
-
+    document.getElementById('ans').value = foo;
+    
   }
 }
+
+// {
+//   function ranking(){
+//     _d = new Date().getTime(); //キャッシュ回避のため日時を利用する
+//     $.get("1.php?_d=" + _d, function(data){
+//     var a = data.split("\n"); //改行で区切る
+//     var table = '<table border=1 cellspacing=0 cellpadding=2 style="background-color: lightsteelblue">';
+//     table += '<tr><td colspan="4" align="center" style="font-weight: bold; font-style: italic; background-color: darkslategray; color: white;">ranking</td></tr><tr><td>順位</td><td>時間</td><td>名前</td><td>日時</td></tr>';
+//     for(i=0;i<a.length-1;i++){
+//     var b = a[i].split(","); //カンマで区切る
+//     table += '<tr><td><a href="10play.php?r=' + i + '">' + (i+1) + "</a></td><td>" + b[2] +
+//    "</td><td>"
+//     + b[1] + "</td><td>" + b[0] + "</td></tr>";
+//     }
+//     table += "</table>";
+//     document.getElementById("ranking").innerHTML = table;
+//    });
+//    } 
+   
+// }
