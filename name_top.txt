@@ -1,0 +1,27 @@
+BEGIN;
+DROP TABLE IF EXISTS name_top;
+COMMIT;
+BEGIN;
+CREATE TABLE IF NOT EXISTS name_top (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    単語 VARCHAR(10) NOT NULL,
+    属性 ENUM('アクション','ファンタジー','コメディ','日常') NOT NULL
+);
+COMMIT;
+BEGIN;
+INSERT INTO name_top(id,単語,属性) VALUES('','真・','アクション');
+INSERT INTO name_top(id,単語,属性) VALUES('','地上最強の','アクション');
+INSERT INTO name_top(id,単語,属性) VALUES('','強い','アクション');
+INSERT INTO name_top(id,単語,属性) VALUES('','恐ろしい','アクション');
+INSERT INTO name_top(id,単語,属性) VALUES('','賢い','ファンタジー');
+INSERT INTO name_top(id,単語,属性) VALUES('','キュートな','日常');
+INSERT INTO name_top(id,単語,属性) VALUES('','ゆるふわ','日常');
+INSERT INTO name_top(id,単語,属性) VALUES('','優しい','日常');
+INSERT INTO name_top(id,単語,属性) VALUES('','ちいさくてかわいい','コメディ');
+INSERT INTO name_top(id,単語,属性) VALUES('','忠犬','日常');
+INSERT INTO name_top(id,単語,属性) VALUES('','たまんねえ','コメディ');
+INSERT INTO name_top(id,単語,属性) VALUES('','ピン芸人','コメディ');
+INSERT INTO name_top(id,単語,属性) VALUES('','超絶怒涛の','コメディ');
+INSERT INTO name_top(id,単語,属性) VALUES('','「新品」','日常');
+INSERT INTO name_top(id,単語,属性) VALUES('','ヤベー','コメディ');
+COMMIT;
