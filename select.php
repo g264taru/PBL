@@ -1,6 +1,6 @@
 <?php
     $con = mysql_connect('localhost','アカウント','') or die("接続失敗"); //mysqlに接続
-    mysql_select_db('データベース名') or die("選択失敗"); //データベースに接続
+    mysql_select_db('データベース名') or die("選択失敗"); //データベースを選択
     mysql_query('SET NAMES utf8', $con);
 
     $sql1 = "SELECT 単語 FROM name_top"; //name_topの全属性の単語を取得
