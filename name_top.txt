@@ -4,7 +4,7 @@ COMMIT;
 BEGIN;
 CREATE TABLE IF NOT EXISTS name_top (
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    単語 VARCHAR(10) NOT NULL,
+    単語 VARCHAR(20) NOT NULL,
     属性 ENUM('アクション','ファンタジー','コメディ','日常') NOT NULL
 );
 COMMIT;
