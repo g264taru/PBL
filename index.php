@@ -6,7 +6,22 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <?php
+     <?php
+      $con = mysql_connect('localhost','g127kato','') or die("接続失敗"); //mysqlに接続
+      mysql_select_db('g127kato') or die("選択失敗"); //データベース接続
+      mysql_query('SET NAMES utf8', $con);
+
+      $sql1 = 'SELECT 単語 FROM name_top'; //name_topの全属性の単語を取得
+      $res = mysql_query($sql1, $con) or die("エラー");
+       while ($db = mysql_fetch_assoc($res)) {
+       echo '<table border=1 style="background-color: lavender; font-weight: bold;">';
+       echo "<tr><td>英単語</td><td>${db['単語']}</td></tr></table>";
+       }
+
+      mysql_close($con);
+    ?>
+    
+   /* <?php
       $con = mysql_connect('localhost','g193sasa','') or die("接続失敗"); //mysqlに接続
       mysql_select_db('g193sasa') or die("選択失敗"); //データベース接続
       mysql_query('SET NAMES utf8', $con);
@@ -36,7 +51,7 @@
       $aryList6 = $sth6 -> fetchAll(PDO::FETCH_COLUMN);
       
       mysql_close($con);
-    ?>
+    ?>*/
 
     <div class="container">
       <ul class="menu">
