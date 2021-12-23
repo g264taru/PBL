@@ -16,17 +16,17 @@
       $i = 0;
       while ($db = mysql_fetch_assoc($res)) {
           $array[$i] = $db['word'];
-          $i++;
           $json_array1 = json_encode($array);//javascriptに変換するためにjson形式にする
+          $i++;
       }
 
-     $sql2 = "SELECT word FROM name_top WHERE attributes = 'action'"; //name_topのアクション系の単語を取得
+      $sql2 = "SELECT word FROM name_top WHERE attributes = 'action'"; //name_topのアクション系の単語を取得
       $res = mysql_query($sql2, $con) or die("エラー");
       $i = 0;
       while ($db = mysql_fetch_assoc($res)) {
           $array[$i] = $db['word'];
-          $i++;
           $json_array2 = json_encode($array);//javascriptに変換するためにjson形式にする
+          $i++;
       }
 
       $sql3 = "SELECT word FROM name_top WHERE attributes = 'fantasy'"; //name_topのファンタジー系の単語を取得
@@ -34,8 +34,8 @@
       $i = 0;
       while ($db = mysql_fetch_assoc($res)) {
           $array[$i] = $db['word'];
-          $i++;
           $json_array3 = json_encode($array);//javascriptに変換するためにjson形式にする
+          $i++;
       }
 
       $sql4 = "SELECT word FROM name_top WHERE attributes = 'comedy'"; //name_topのコメディ系の単語を取得
@@ -43,8 +43,8 @@
       $i = 0;
       while ($db = mysql_fetch_assoc($res)) {
           $array[$i] = $db['word'];
-          $i++;
           $json_array4 = json_encode($array);//javascriptに変換するためにjson形式にする
+          $i++;
       }
 
       $sql5 = "SELECT word FROM name_top WHERE attributes = 'real'"; //name_topの日常系の単語を取得
@@ -52,8 +52,8 @@
       $i = 0;
       while ($db = mysql_fetch_assoc($res)) {
           $array[$i] = $db['word'];
-          $i++;
           $json_array5 = json_encode($array);//javascriptに変換するためにjson形式にする
+          $i++;
       }
 
       $sql6 = "SELECT word FROM name_bottom"; //name_bottomから単語を取得
@@ -61,8 +61,8 @@
       $i = 0;
       while ($db = mysql_fetch_assoc($res)) {
           $array[$i] = $db['word'];
-          $i++;
           $json_array6 = json_encode($array);//javascriptに変換するためにjson形式にする
+          $i++;
       }
     
       mysql_close($con);
